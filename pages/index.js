@@ -3,9 +3,28 @@ import config from "../config.json";
 import styled from "styled-components";
 import Menu from "../src/component/Menu/";
 import { StyledTimeline } from "../src/component/Timeline";
+import { videoServices } from "../src/services/videoService";
 
 function HomePage() {
+  const service = videoServices();
   const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
+  const [playlist, setPlaylist] = React.useState({});
+
+  React.useEffect(() => {
+    service
+    .getAllVideos()
+    .then((dados) => {
+      const novasPlaylists = { ...playlist };
+      dados.data.forEach((video) => {
+        if (!novasPlaylists[video.playlist]) {
+          novasPlaylists[video.playlist] = [];
+        }
+        novasPlaylists[video.playlist].push(video);
+      });
+      setPlaylist(novasPlaylists);
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -15,13 +34,12 @@ function HomePage() {
           flex: 1,
         }}
       >
-        {/* prop drilling */}
         <Menu
           valorDoFiltro={valorDoFiltro}
           setvalorDoFiltro={setvalorDoFiltro}
         />
         <Header />
-        <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
+        <Timeline searchValue={valorDoFiltro} playlists={playlist}>
           Conteúdo
         </Timeline>
       </div>
@@ -32,7 +50,7 @@ function HomePage() {
 export default HomePage;
 
 const StyledHeader = styled.div`
-  background-color: ${({theme}) => theme.backgroundLevel1};
+  background-color: ${({ theme }) => theme.backgroundLevel1};
 
   img {
     width: 80px;
@@ -51,16 +69,15 @@ const StyledHeader = styled.div`
 const StyledBanner = styled.div`
   /* background: url(${config.bg}) center center no-repeat;
   background-size: cover; */
-  background: url(${({bg})=> bg});
+  background: url(${({ bg }) => bg});
   background-position: center;
   background-size: cover;
   height: 300px;
-
-`
+`;
 function Header() {
   return (
     <StyledHeader>
-      <StyledBanner bg={config.bg}/>
+      <StyledBanner bg={config.bg} />
       <section className="user-info">
         <img src={`https://github.com/${config.github}.png`} />
         <div>
@@ -74,8 +91,6 @@ function Header() {
 
 function Timeline({ searchValue, ...propriedades }) {
   const playlistNames = Object.keys(propriedades.playlists);
-  // Statement
-  // Retorno por expressão
   return (
     <StyledTimeline>
       {playlistNames.map((playlistName, index) => {

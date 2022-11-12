@@ -34,16 +34,7 @@ const StyledSearch = styled.div`
   }
 `;
 
-// Home 
-// Menu
-// Search
-// Informação sempre desce
-
 export default function Search({valorDoFiltro, setvalorDoFiltro}) {
-    // const [valorDaBusca, setValorDaBusca] = React.useState("frost");
-    // console.log("Search", valorDaBusca)
-    // const valorDaBusca = valorDoFiltro;
-    // const setValorDaBusca = setValorDoFiltro;
     const valorDaBusca = valorDoFiltro
     const setValorDaBusca = setvalorDoFiltro
     return (
