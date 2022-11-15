@@ -10,7 +10,7 @@ export const ColorModeContext = React.createContext({
   }
 });
 
-export default function ColorModeprovider(props) {
+function ColorModeprovider(props) {
   const [mode, setMode] = React.useState(props.initialMode);
 
   function toggleMode() {
@@ -27,3 +27,5 @@ export default function ColorModeprovider(props) {
     </ColorModeContext.Provider>
   );
 }
+
+export default ColorModeprovider;

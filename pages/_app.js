@@ -1,10 +1,8 @@
 import React from "react";
-import { CSSReset } from "../src/component/CSSReset";
+import { CSSReset } from "../src/StyleReset/CSSReset";
 import { ThemeProvider } from "styled-components";
-import ColorModeprovider, {
-  ColorModeContext,
-} from "../src/component/Menu/component/ColorMode";
-import RegisterVideo from "../src/component/Menu/component/ResgisterVideo";
+import ColorModeprovider, {ColorModeContext} from "../src/context/ColorMode";
+import RegisterVideo from "../src/component/ResgisterVideo";
 
 const theme = {
   light: {

@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components"
 
-const StyledSearch = styled.div`
+export const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
   border: 1px solid ${({ theme }) => theme.borderBase};
@@ -33,18 +32,3 @@ const StyledSearch = styled.div`
     }
   }
 `;
-
-export default function Search({valorDoFiltro, setvalorDoFiltro}) {
-    const valorDaBusca = valorDoFiltro
-    const setValorDaBusca = setvalorDoFiltro
-    return (
-        <StyledSearch>
-            <input type="text" onChange={(e) => {
-                setValorDaBusca(e.target.value) 
-            }} value={valorDaBusca} />
-            <button>
-                🔎
-            </button>
-        </StyledSearch>
-    )
-}
