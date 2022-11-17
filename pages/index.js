@@ -1,8 +1,10 @@
 import React from "react";
+import config from "../config.json"
 import Menu from "../src/component/Menu";
 import Timeline  from "../src/component/TimeLine"
 import  Header  from "../src/component/Header";
 import { videoServices } from "../src/services/videoService";
+import  FavoritesChannel  from "../src/component/Favorites";
 
 function HomePage() {
   const service = videoServices();
@@ -36,9 +38,10 @@ function HomePage() {
           setvalorDoFiltro={setvalorDoFiltro}
         />
         <Header />
-        <Timeline searchValue={valorDoFiltro} playlists={playlist}>
-          Conteúdo
+        <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
+        Conteúdo
         </Timeline>
+        <FavoritesChannel />
       </div>
     </>
   );

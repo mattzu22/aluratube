@@ -7,7 +7,7 @@ import RegisterVideo from "../src/component/ResgisterVideo";
 const theme = {
   light: {
     backgroundBase: "#f9f9f9",
-    backgroundLevel1: "#ffffff",
+    backgroundLevel1: "#DCDCDC",
     backgroundLevel2: "#f0f0f0",
     borderBase: "#e5e5e5",
     textColorBase: "#222222",
@@ -23,7 +23,7 @@ const theme = {
 
 function ProviderWrapper(props) {
   return (
-    <ColorModeprovider initialMode="light">
+    <ColorModeprovider initialMode="dark">
       {props.children}
     </ColorModeprovider>
   );

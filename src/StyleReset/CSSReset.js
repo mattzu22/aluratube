@@ -7,6 +7,7 @@ export const CSSReset = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  
   body {
     font-family: sans-serif;
     background-color: ${({theme}) => theme.backgroundBase};
@@ -37,4 +38,17 @@ export const CSSReset = createGlobalStyle`
       opacity: .5;
     }
   }
+
+*::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: ${({theme}) => theme.borderBase};    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
 `;

@@ -1,8 +1,32 @@
 {
-  "name": "Matheus Macedo (Front-end Develope)",
-  "job": "Desenvolvedor Front-End",
-  "bg": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+  "name": "Matheus Macedo (MattzuDev)",
+  "job": "Desenvolvedor Front-End Júnior",
+  "bg": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80",
   "github": "mattzu22",
+  "favorites": { 
+    "channel": [
+    {
+      "name": "Coisa de Nerd",
+      "url": "https://www.youtube.com/@coisadenerd",
+      "image": "https://yt3.ggpht.com/ytc/AMLnZu9XCumF881WgJ5yEIZp7BWuImKNC9T-IwVUEGeXyg=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "name": "Dev em Dobro",
+      "url": "https://www.youtube.com/c/rafaellaballerini",
+      "image": "https://yt3.ggpht.com/QWuZEfi7jorLq38qEg1efAe3fA5m3FZxrdInAhfo5rbciOFlklKw-_GzgkymgHKGWnL8V-4p=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "name": "Rafaella Ballerini",
+      "url": "https://www.youtube.com/@coisadenerd",
+      "image": "https://yt3.ggpht.com/84ALFuw4UCyfL1TyoMU77D-I6xngPjn2X0kbx2bMAyoFzWwR-utcrbDn_MuNJcroPcmU9NdGGQ=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "name": "Mario Souto - Dev Soutinho",
+      "url": "https://www.youtube.com/c/DevSoutinho",
+      "image": "https://yt3.ggpht.com/m8Yrqf0Y81L4mZ1Cq7rGnJ4NDHe6729rxiFZvWyy9-xd_Z7Osmza7J8NWpN1axMHcCb1oKJNgA=s88-c-k-c0x00ffffff-no-rj"
+    }
+]
+},
   "playlists": {
     "jogos": [
         {

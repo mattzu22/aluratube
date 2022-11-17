@@ -5,8 +5,8 @@ export const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.backgroundLevel1};
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
   }
   .user-info {
@@ -20,7 +20,8 @@ export const StyledHeader = styled.div`
 
 export const StyledBanner = styled.div`
   background: url(${({ bg }) => bg});
-  background-position: center;
+  background-position: center ;
   background-size: cover;
-  height: 300px;
+  background-repeat: no-repeat;
+  height: 400px;
 `;

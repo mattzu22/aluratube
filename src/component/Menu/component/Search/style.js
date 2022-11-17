@@ -4,11 +4,11 @@ export const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
   border: 1px solid ${({ theme }) => theme.borderBase};
-  max-width: 425px;
+  max-width: 400px;
   width: 100%;
-  border-radius: 2px;
+  height: 40px;
+  border-radius: 20px;
   overflow: hidden;
-  
   input {
     width: 80%;
     padding: 4px 6px;
